@@ -88,14 +88,12 @@ spec:
     spec:
       containers:
       - name: server
-        image: gcr.io/google-samples/microservices-demo/paymentservice:v0.9.0
+        image: gcr.io/google-samples/microservices-demo/paymentservice:v0.2.3
         ports:
         - containerPort: 50051
         env:
         - name: PORT
           value: "50051"
-        - name: PROJECT_ID
-          value: "google-samples"
 ---
 apiVersion: v1
 kind: Service
@@ -162,14 +160,12 @@ spec:
     spec:
       containers:
       - name: server
-        image: gcr.io/google-samples/microservices-demo/currencyservice:v0.9.0
+        image: gcr.io/google-samples/microservices-demo/currencyservice:v0.2.3
         ports:
         - containerPort: 7000
         env:
         - name: PORT
           value: "7000"
-        - name: PROJECT_ID
-          value: "google-samples"
 ---
 apiVersion: v1
 kind: Service
